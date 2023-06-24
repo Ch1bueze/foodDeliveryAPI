@@ -2,8 +2,8 @@ package com.api.foodapp.auth;
 
 import com.api.foodapp.config.JwtService;
 import com.api.foodapp.repository.UserRepository;
-import com.api.foodapp.user.Role;
-import com.api.foodapp.user.User;
+import com.api.foodapp.entity.Role;
+import com.api.foodapp.entity.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

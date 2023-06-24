@@ -1,6 +1,6 @@
 package com.api.foodapp.repository;
 
-import com.api.foodapp.user.User;
+import com.api.foodapp.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

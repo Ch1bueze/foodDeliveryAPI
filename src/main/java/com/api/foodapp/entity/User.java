@@ -1,4 +1,4 @@
-package com.api.foodapp.user;
+package com.api.foodapp.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
