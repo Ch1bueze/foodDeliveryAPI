@@ -4,21 +4,19 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.HashSet;
-import java.util.Set;
+import lombok.NonNull;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Restaurant {
+public class FoodMenu {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    @Column(name = "name", nullable = false)
     private String name;
-    @OneToMany(mappedBy = "restaurant", cascade = CascadeType.ALL, orphanRemoval = true)
-    private Set<FoodMenu> menus = new HashSet<>();
-
+    private String price;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "Restaurant_id", nullable = false)
+    private Restaurant restaurant;
 }
